@@ -1,6 +1,6 @@
 import React from 'react';
+import './MainResumePage.css';
 import { makeStyles, rgbToHex } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
@@ -14,6 +14,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
+import TableFooter from '@material-ui/core/TableFooter';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -74,39 +75,41 @@ const fmkRows = [
   createData('Git', '3 years'),
 ];
 
-export default function CenteredGrid() {
+export default function MainResumePage() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Grid container >
-        
-        <Grid item xs={12} style={{padding:40}}>
+       
+        <Grid item xs={0} sm={0} md={2} lg={2} xl={2}>
+        </Grid>
+        <Grid item justify xs={12} sm={12} md={8} lg={8} xl={8} style={{padding:40}} >
           
           <Typography variant="h2" component="h2" gutterBottom>
             Andrés Arnulfo Saldaña Aguilar
           </Typography>
 
-          <Typography variant="h4" gutterBottom>Contact</Typography>
+          <Typography variant="h3" component="h2" gutterBottom>Contact</Typography>
           <Grid container className={classes.root}>
             <Grid item xs={1}>
-            <LinkedInIcon style={{ fontSize: 25 }}></LinkedInIcon>
+            <LinkedInIcon style={{ fontSize: 27 }}></LinkedInIcon>
             </Grid>
             <Grid item xs={11}>
-            <Typography><Link variant="h7" href="#" >linkedin.com/in/andressaldanaaguilar</Link></Typography>
+            <Typography><Link variant="h7" href="linkedin.com/in/andressaldanaaguilar">linkedin.com/in/andressaldanaaguilar</Link></Typography>
             </Grid>
           </Grid>
           <Grid container className={classes.root}>
             <Grid item xs={1}>
-            <GitHubIcon style={{ fontSize: 25 }}></GitHubIcon>
+            <GitHubIcon style={{ fontSize: 27 }}></GitHubIcon>
             </Grid>
             <Grid item xs={11}>
-            <Typography><Link href="#" variant="h7" >github.com/andresSaldanaAguilar </Link></Typography>
+            <Typography><Link href="github.com/andresSaldanaAguilar" variant="h7" >github.com/andresSaldanaAguilar </Link></Typography>
             </Grid>
           </Grid>
           <Grid container className={classes.root}>
             <Grid item xs={1}>
-            <MailIcon style={{ fontSize: 25 }}></MailIcon>
+            <MailIcon style={{ fontSize: 27 }}></MailIcon>
             </Grid>
             <Grid item xs={11}>
             <Typography><Link href="#" variant="h7" >andres.saldana.aguilar@gmail.com</Link></Typography>
@@ -114,16 +117,17 @@ export default function CenteredGrid() {
           </Grid>
           <Grid container className={classes.root}>
             <Grid item xs={1}>
-            <PhoneIcon style={{ fontSize: 25 }}></PhoneIcon>
+            <PhoneIcon style={{ fontSize: 27 }}></PhoneIcon>
             </Grid>
             <Grid item xs={11}>
             <Typography><Link href="#" variant="h7" >5543890085 </Link></Typography>
             </Grid>
           </Grid>
-
+          <Grid item xs={0} sm={0}  md={2} lg={2} xl={2}>
+        </Grid>
           <p></p>
           
-          <Typography variant="h4" gutterBottom>About</Typography>
+          <Typography variant="h3" component="h2" gutterBottom>About</Typography>
           <Typography component="h2" gutterBottom><span class="emoji">👨‍💻</span> Computer Systems Engineer since 2020</Typography>
           <Typography component="h2" gutterBottom><span class="emoji">🏫</span> Escuela Superior de Cómputo IPN</Typography>
           <Typography component="h2" gutterBottom><span class="emoji">✍</span> 9.14/10.00 GPA</Typography>
@@ -132,9 +136,9 @@ export default function CenteredGrid() {
           <p></p>
 
 
-          <Typography variant="h4" gutterBottom>Thesis</Typography>
-          <Typography variant="h6" gutterBottom>Real time energy production monitoring</Typography>
-          <Typography variant="p" gutterBottom>
+          <Typography variant="h3" component="h2" gutterBottom>Thesis</Typography>
+          <Typography variant="h5" component="h4" gutterBottom>Real time energy production monitoring</Typography>
+          <Typography component="p" gutterBottom>
             My thesis partners and I investigated and developed a system capable of
             real time energy production monitoring from distinct sources, alerting
             related problems on an android application. Logic was contained by an embedded server,
@@ -143,24 +147,25 @@ export default function CenteredGrid() {
           
           <p></p>
 
-          <Typography variant="h4" gutterBottom>Experience</Typography>
-          <Typography variant="h6" gutterBottom>Freelance - Full-Stack developer and analyst (November 2017 - July 2018)</Typography>
-          <Typography variant="p" gutterBottom>
+          <Typography variant="h3" component="h2" gutterBottom>Experience</Typography>
+          
+          <Typography variant="h5" component="h4" gutterBottom>Freelance - Full-Stack developer and analyst (November 2017 - July 2018)</Typography>
+          <Typography component="p" gutterBottom>
             Analysis, design and developing of web platform for train stoplights issues reporting, shorting report
             time and attendance all over the country.
             This platform was developed with Laravel framework and deployed on a linux cloud sever.
                 </Typography>
 
-          <Typography variant="h6" gutterBottom>E-Global Software Developer Intern (August 2019 - November 2019)</Typography>
-          <Typography variant="p" gutterBottom>
+          <Typography variant="h5" component="h4" gutterBottom>E-Global Software Developer Intern (August 2019 - November 2019)</Typography>
+          <Typography component="p" gutterBottom>
             Developing of web services for client transaction authentication, storage and authorization
             with the use of Spring Boot framework.
             Service Migration from Java EE to Spring Boot.
             Clients: BBVA Bancomer, BanCoppel
                 </Typography>
 
-          <Typography variant="h6" gutterBottom>ThinkSkink - Software Engineer Jr (December 2019 - Present)</Typography>
-          <Typography variant="p" gutterBottom>
+          <Typography variant="h5" component="h4" gutterBottom>ThinkSkink - Software Engineer Jr (December 2019 - Present)</Typography>
+          <Typography component="p" gutterBottom>
             ThinkSkink - Software Engineer Jr (December 2019 - Present)
             Developing of new backend, frontend, testing and deploying functionalities for business process automatization tool.
             Clients: Telcel, Wom Chile, Nextel y Claro Perú
@@ -168,7 +173,7 @@ export default function CenteredGrid() {
 
           <p></p>
 
-          <Typography variant="h4" gutterBottom>Technical Skills</Typography>
+          <Typography variant="h3" component="h2" gutterBottom>Technical Skills</Typography>
           <TableContainer className={classes.container}>
             <Table stickyHeader aria-label="sticky table">
               <TableHead>
@@ -303,13 +308,14 @@ export default function CenteredGrid() {
           </TableContainer>
 
           <p></p>
-          <Typography variant="h4" gutterBottom>Hobbies</Typography>
+          <Typography variant="h3" component="h2" gutterBottom>Hobbies</Typography>
           <Typography component="h2" gutterBottom> <span class="emoji">♟️</span> Chess</Typography>
           <Typography component="h2" gutterBottom><span class="emoji">📷</span> Photography</Typography>
           <Typography component="h2" gutterBottom> <span class="emoji">🎨</span>Arts</Typography>
           <Typography component="h2" gutterBottom><span class="emoji">💻💖</span>And of course, Coding </Typography>
         </Grid>
       </Grid>
+      <TableFooter></TableFooter>
     </div>
   );
 }
