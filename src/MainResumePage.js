@@ -130,10 +130,10 @@ export default function MainResumePage() {
           {contact.map((link) => {
             return(
               <Grid container>
-                <Grid item xs={1}>
+                <Grid item xs={2}>
                   {link.icon}
                 </Grid>
-                <Grid item xs={11}>
+                <Grid item xs={10}>
                   <Typography><Link variant="h7" href={link.link}>{link.description}</Link></Typography>
                 </Grid>
               </Grid>
@@ -166,16 +166,7 @@ export default function MainResumePage() {
           {experience.map((item) => {
             return(
               <div>
-                <Grid container justify="flex-start">
-                 <Grid item xs={8}>
-                <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header}</Typography>
-
-                 </Grid>
-                 <Grid item xs={4}>
-                  <Chip color="primary" label={item.date}/>
-
-                 </Grid>
-                </Grid>
+                <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip variant="outlined" color="secondary" label={item.date}/></Typography>
                 <Typography component="p" gutterBottom>{item.description}</Typography>
                 <Typography component="p" gutterBottom>Clients: {item.clients}</Typography>
               </div>
