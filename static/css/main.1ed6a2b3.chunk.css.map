@@ -1,0 +1,1 @@
+{"version":3,"sources":["MainResumePage.css"],"names":[],"mappings":"AAAA,WACI,cAAe,CACf,qBAAsB,CACtB,aACJ","file":"main.1ed6a2b3.chunk.css","sourcesContent":["span.emoji {\r\n    font-size: 30px;\r\n    vertical-align: middle;\r\n    line-height: 2;\r\n}\r\n"]}
