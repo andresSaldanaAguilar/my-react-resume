@@ -1,6 +1,5 @@
 import React from 'react';
 import './MainResumePage.css';
-import { makeStyles, rgbToHex } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
@@ -14,27 +13,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
-import TableFooter from '@material-ui/core/TableFooter';
 import Chip from '@material-ui/core/Chip';
-import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: purple,
-    secondary: green,
-  },
-  status: {
-    danger: 'orange',
-  },
-});
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  }
-}));
 
 const contact = [
   {link : 'https://linkedin.com/in/andressaldanaaguilar', description : 'andressaldanaaguilar', icon : <LinkedInIcon ></LinkedInIcon>},
@@ -111,109 +90,102 @@ const hobbies = [
   {emoji : '💻💖', name : 'And of course, Coding'}
 ];
 
-export default function MainResumePage() {
-  const classes = useStyles();
+class MainResumePage extends React.Component {
 
-  return (
-    <div className={classes.root}>
-      <Grid container >
-       
-        <Grid item xs={0} sm={0} md={2} lg={2} xl={2}>
-        </Grid>
-        <Grid item justify xs={12} sm={12} md={8} lg={8} xl={8} style={{padding:40}} >
-          
-          <Typography variant="h2" component="h2" gutterBottom>
-            Andrés Arnulfo Saldaña Aguilar
-          </Typography>
-
-          <Typography variant="h3" component="h2" gutterBottom>Contact</Typography>
-          {contact.map((link) => {
-            return(
-              <Grid container>
-                <Grid item xs={2}>
-                  {link.icon}
-                </Grid>
-                <Grid item xs={10}>
-                  <Typography><Link variant="h7" href={link.link}>{link.description}</Link></Typography>
-                </Grid>
+  render(){
+    return (
+      <div>
+        <Typography variant="h2"gutterBottom>
+          Andrés Arnulfo Saldaña Aguilar
+        </Typography>
+        <Typography variant="h4" gutterBottom>Contact</Typography>
+        {contact.map((link) => {
+          return(
+            <Grid container>
+              <Grid item xs={2}>
+                {link.icon}
               </Grid>
-            )}
+              <Grid item xs={10}>
+                <Typography><Link variant="h7" href={link.link}>{link.description}</Link></Typography>
+              </Grid>
+            </Grid>
           )}
-         
-          <p></p>
-          
-          <Typography variant="h3" component="h2" gutterBottom>About</Typography>
-          {about.map((item) => {
-            return(
-            <Typography component="h2" gutterBottom><span class="emoji" role="img">{item.emoji}</span>{item.name}</Typography>
-            )}
+        )}
+      
+        <p></p>
+        
+        <Typography variant="h4" gutterBottom>About</Typography>
+        {about.map((item) => {
+          return(
+          <Typography component="h2" gutterBottom><span class="emoji" role="img">{item.emoji}</span>{item.name}</Typography>
           )}
+        )}
 
-          <p></p>
+        <p></p>
 
-          <Typography variant="h3" component="h2" gutterBottom>Thesis</Typography>
-          <Typography variant="h5" component="h4" gutterBottom color="primary">Real time energy production monitoring</Typography>
-          <Typography component="p" gutterBottom>
-            My thesis partners and I investigated and developed a system capable of
-            real time energy production monitoring from distinct sources, alerting
-            related problems on an android application. Logic was contained by an embedded server,
-            processing and signal treatment was handled by a microcontroller.
-          </Typography>
-          
-          <p></p>
+        <Typography variant="h4" gutterBottom>Thesis</Typography>
+        <Typography variant="h5" component="h4" gutterBottom color="primary">Real time energy production monitoring</Typography>
+        <Typography component="p" gutterBottom>
+          My thesis partners and I investigated and developed a system capable of
+          real time energy production monitoring from distinct sources, alerting
+          related problems on an android application. Logic was contained by an embedded server,
+          processing and signal treatment was handled by a microcontroller.
+        </Typography>
+        
+        <p></p>
 
-          <Typography variant="h3" component="h2" gutterBottom>Experience</Typography>
-          {experience.map((item) => {
-            return(
-              <div>
-                <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip variant="outlined" color="secondary" label={item.date}/></Typography>
-                <Typography component="p" gutterBottom>{item.description}</Typography>
-                <Typography component="p" gutterBottom>Clients: {item.clients}</Typography>
-              </div>
-            );
-          })}
-          
-          <p></p>
+        <Typography variant="h4" gutterBottom>Experience</Typography>
+        {experience.map((item) => {
+          return(
+            <div>
+              <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip variant="outlined" color="secondary" label={item.date}/></Typography>
+              <Typography component="p" gutterBottom>{item.description}</Typography>
+              <Typography component="p" gutterBottom>Clients: {item.clients}</Typography>
+            </div>
+          );
+        })}
+        
+        <p></p>
 
-          <Typography variant="h3" component="h2" gutterBottom>Technical Skills</Typography>
-          
-          {skills.map((category) => {
-            return(
-              <TableContainer className={classes.container}>
-                <Table stickyHeader aria-label="sticky table">
-                  <TableHead>
-                    <TableRow>
-                        <TableCell style={{background:"#f1f1f1"}}>{category.label}</TableCell>
-                        <TableCell style={{background:"#f1f1f1"}}></TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {category.rows.map((row) => {
-                      return (
-                        <TableRow hover role="checkbox" tabIndex={-1} >                 
-                              <TableCell >{row.key}</TableCell>
-                              <TableCell >{row.value}</TableCell>   
-                        </TableRow>
-                      );
-                    })}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            );
-          })}
-          
-          <p></p>
+        <Typography variant="h4" gutterBottom>Technical Skills</Typography>
+        
+        {skills.map((category) => {
+          return(
+            <TableContainer >
+              <Table stickyHeader aria-label="sticky table">
+                <TableHead>
+                  <TableRow >
+                      <TableCell >{category.label}</TableCell>
+                      <TableCell ></TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {category.rows.map((row) => {
+                    return (
+                      <TableRow hover role="checkbox" tabIndex={-1} >                 
+                            <TableCell >{row.key}</TableCell>
+                            <TableCell >{row.value}</TableCell>   
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          );
+        })}
+        
+        <p></p>
 
-          <Typography variant="h3" component="h2" gutterBottom>Hobbies</Typography>
-          {hobbies.map((hobbie) => {
-            return(
-              <Typography component="h2" gutterBottom> <span class="emoji" role="img">{hobbie.emoji}</span>{hobbie.name}</Typography>
-            )}
+        <Typography variant="h4" gutterBottom>Hobbies</Typography>
+        {hobbies.map((hobbie) => {
+          return(
+            <Typography component="h2" gutterBottom> <span class="emoji" role="img">{hobbie.emoji}</span>{hobbie.name}</Typography>
           )}
+        )}
 
-        </Grid>
-      </Grid>
-      <TableFooter></TableFooter>
-    </div>
-  );
+      </div>
+    );
+  };
 }
+
+export default MainResumePage;
