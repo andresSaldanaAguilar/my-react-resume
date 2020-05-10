@@ -51,7 +51,7 @@ class MainResumePage extends React.Component {
         </Typography>
         
         <p></p>
-c
+
         <Typography variant="h4" gutterBottom>{this.props.language.experience.header}</Typography>
         {this.props.language.experience.content.map((item) => {
           return(
