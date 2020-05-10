@@ -12,20 +12,29 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TableFooter from '@material-ui/core/TableFooter';
 import Typography from '@material-ui/core/Typography';
+import Select from '@material-ui/core/Select';
+import NativeSelect from '@material-ui/core/NativeSelect';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
+import spanishBundle from './spanishBundle';
+import englishBundle from './englishBundle';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+import InvertColorsIcon from '@material-ui/icons/InvertColors';
 
 /*imported from material UI webpage*/
 const AntSwitch = withStyles((theme) => ({
   root: {
-    width: 28,
-    height: 16,
+    width: 60,
+    height: 36,
     padding: 0,
     display: 'flex',
   },
   switchBase: {
-    padding: 2,
+    padding: 3,
     color: theme.palette.grey[500],
     '&$checked': {
-      transform: 'translateX(12px)',
+      transform: 'translateX(24px)',
       color: theme.palette.common.white,
       '& + $track': {
         opacity: 1,
@@ -35,13 +44,13 @@ const AntSwitch = withStyles((theme) => ({
     },
   },
   thumb: {
-    width: 12,
-    height: 12,
+    width: 30,
+    height: 30,
     boxShadow: 'none',
   },
   track: {
     border: `1px solid ${theme.palette.grey[500]}`,
-    borderRadius: 16 / 2,
+    borderRadius: 36 / 2,
     opacity: 1,
     backgroundColor: theme.palette.common.white,
   },
@@ -52,13 +61,20 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {themeType :'light'};
+    this.state = {themeType :'light',language:"en"};
     this.toggleTheme = this.toggleTheme.bind(this);
+    this.toggleLanguage = this.toggleLanguage.bind(this);
   }
 
   toggleTheme() {
     this.setState({
       themeType : this.state.themeType === 'light' ? 'dark' : 'light'   
+    });
+  }
+
+  toggleLanguage(e) {
+    this.setState({
+      language : e.target.value
     });
   }
   
@@ -82,21 +98,41 @@ class App extends React.Component {
             <Grid item justify xs={12} sm={12} md={8} lg={8} xl={8} >
               <Grid style={{padding:40}}>
               
-                <Grid component="label" container alignItems="center" spacing={1} style={{borderBottom: "0.3px solid",paddingBottom:"10px"}}>
-                  <Grid item><Typography variant="h7" gutterBottom>Dark Theme</Typography></Grid>
+                <Grid container spacing={1}  justify="space-between" alignItems="center" style={{borderBottom: "0.3px solid",paddingBottom:"10px"}}>
                   <Grid item>
-                    <AntSwitch onClick={this.toggleTheme} name="checkedC" />
+                    <Grid  container justify="space-between" alignItems="center">
+                      <InvertColorsIcon fontSize="large"/>
+                      <AntSwitch onClick={this.toggleTheme} />
+                    </Grid>
+                  </Grid>
+                  <Grid item>
+                    <FormControl variant="outlined">
+                      <InputLabel htmlFor="outlined-age-native-simple">Language</InputLabel>
+                      <Select
+                        native
+                        value={this.state.language}
+                        onChange={this.toggleLanguage}
+                        label="Language"
+                        inputProps={{
+                          name: 'age',
+                          id: 'outlined-age-native-simple',
+                        }}
+                      >
+                        <option value={"en"}>English</option>
+                        <option value={"es"}>Spanish</option>
+                      </Select>
+                    </FormControl>
                   </Grid>
                 </Grid>
-
                 <p></p>
 
-                <MainResumePage/>
+                <MainResumePage language={this.state.language === 'es' ? spanishBundle : englishBundle}/>
+
+                <Grid item><Typography style={{borderTop: "0.3px solid",paddingTop:"10px",fontSize:10}} gutterBottom>Author: Andres Saldaña Aguilar 2020  -- Source: https://github.com/andresSaldanaAguilar/my-react-resume</Typography></Grid>
 
               </Grid>
             </Grid>
           </Grid>
-        <TableFooter></TableFooter>
         </ThemeProvider>
       </div>
     );
