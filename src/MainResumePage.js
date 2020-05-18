@@ -10,15 +10,25 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Chip from '@material-ui/core/Chip';
+import { withStyles } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+
+const useStyles = theme => ({
+  root: {
+    justifyContent: 'center',
+    backgroundColor: blue
+  },
+});
 
 class MainResumePage extends React.Component {
-
+  
   render(){
+    const { classes } = this.props;
     return (
       <div>
-        <Typography variant="h2"gutterBottom>
-          Andrés Arnulfo Saldaña Aguilar
-        </Typography>
+        <Typography color="dark" variant="h2">Andrés Arnulfo Saldaña Aguilar</Typography>
+        <Typography style={{fontStyle: 'italic'}} color="primary" variant="small"gutterBottom>{this.props.language.degree}</Typography>
+        <p></p>
         <Typography variant="h4" gutterBottom>{this.props.language.contact.header}</Typography>
         {this.props.language.contact.content.map((link) => {
           return(
@@ -56,7 +66,7 @@ class MainResumePage extends React.Component {
         {this.props.language.experience.content.map((item) => {
           return(
             <div>
-              <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip variant="outlined" color="secondary" label={item.date}/></Typography>
+              <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip style={{color:"#fff",fontWeight:400}} color="secondary" label={item.date}/></Typography>
               <Typography component="p" gutterBottom>{item.description}</Typography>
               <Typography component="p" gutterBottom>Clients: {item.clients}</Typography>
             </div>
@@ -71,10 +81,10 @@ class MainResumePage extends React.Component {
           return(
             <TableContainer >
               <Table stickyHeader aria-label="sticky table">
-                <TableHead>
+                <TableHead >
                   <TableRow >
-                      <TableCell >{category.label}</TableCell>
-                      <TableCell ></TableCell>
+                      <TableCell className={classes.root} >{category.label}</TableCell>
+                      <TableCell className={classes.root} ></TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -92,12 +102,23 @@ class MainResumePage extends React.Component {
           );
         })}
         
+    
+
+        <p></p>
+
+        <Typography variant="h4" gutterBottom>{this.props.language.certifications.header}</Typography>
+        {this.props.language.certifications.content.map((certification) => {
+        return(
+          <Typography component="h2" color="primary" gutterBottom> {certification.title} : {certification.description}</Typography>
+        )}
+        )}
+
         <p></p>
 
         <Typography variant="h4" gutterBottom>{this.props.language.hobbies.header}</Typography>
-        {this.props.language.hobbies.content.map((hobbie) => {
+        {this.props.language.hobbies.content.map((hobby) => {
           return(
-            <Typography component="h2" gutterBottom> <span class="emoji" role="img">{hobbie.emoji}</span>{hobbie.name}</Typography>
+            <Typography component="h2" gutterBottom> <span class="emoji" role="img">{hobby.emoji}</span>{hobby.name}</Typography>
           )}
         )}
 
@@ -106,4 +127,4 @@ class MainResumePage extends React.Component {
   };
 }
 
-export default MainResumePage;
+export default withStyles(useStyles)(MainResumePage);

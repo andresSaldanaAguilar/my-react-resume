@@ -5,6 +5,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
 
 const englishBundle = {
+
+    degree: 'Computer Systems Engineer',
+
     contact : { header:"Contact", content :[
         { link: 'https://linkedin.com/in/andressaldanaaguilar', description: 'andressaldanaaguilar', icon: <LinkedInIcon ></LinkedInIcon> },
         { link: 'https://github.com/andresSaldanaAguilar', description: 'andresSaldanaAguilar', icon: <GitHubIcon ></GitHubIcon> },
@@ -21,9 +24,9 @@ const englishBundle = {
 
     experience : { header:"Experience", content :[
         {
-            header: '‍Freelance - Full-Stack developer and analyst', date: 'Nov 2017 - Jul 2018',
+            header: '‍Rysh electronica S.A de C.V (Freelance) - Full-Stack developer and analyst', date: 'Nov 2017 - Jul 2018',
             description: 'Analysis, design and developing of web platform for train stoplights issues reporting, shorting report time and attendance all over the country.This platform was developed with Laravel framework and deployed on a linux cloud sever.',
-            clients: 'Rysh electronica S.A de C.V'
+            clients: 'Ferromex'
         },
         {
             header: 'E-Global Software Developer Intern', date: 'Aug 2019 - Nov 2019',
@@ -79,6 +82,12 @@ const englishBundle = {
         }
     ]},
 
+    
+    thesis :  { header:"Thesis", content : {
+        title: 'Real time energy production monitoring',
+        description: 'My thesis partners and I investigated and developed a system capable of real time energy production monitoring from distinct sources, alerting related problems on an android application. Logic was contained by an embedded server, processing and signal treatment was handled by a microcontroller.'
+    }},
+
     hobbies : { header:"Likes", content :[
         { emoji: '♟️', name: 'Chess' },
         { emoji: '📷', name: 'Photography' },
@@ -86,10 +95,18 @@ const englishBundle = {
         { emoji: '💻💖', name: 'And of course, Coding' }
     ]},
 
-    thesis :  { header:"Thesis", content : {
-        title: 'Real time energy production monitoring',
-        description: 'My thesis partners and I investigated and developed a system capable of real time energy production monitoring from distinct sources, alerting related problems on an android application. Logic was contained by an embedded server, processing and signal treatment was handled by a microcontroller.'
-    }}
+    certifications : { header:"Certifications", 
+        content : [
+            {   
+                title: 'Course',
+                description: 'IBM Global Bussines, GBS Academy: Microservices '
+            },
+            {   
+                title: 'Certification',
+                description: 'SCRUMstudy : Scrum Fundamentals,  Credential ID: 737953 '
+            }
+        ]
+    }
 }
 
 export default englishBundle;

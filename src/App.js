@@ -21,6 +21,7 @@ import englishBundle from './englishBundle';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
+import Link from '@material-ui/core/Link';
 
 /*imported from material UI webpage*/
 const AntSwitch = withStyles((theme) => ({
@@ -82,9 +83,9 @@ class App extends React.Component {
 
     let theme = createMuiTheme({
       palette: {
-          primary: blue,
-          secondary: red,
-          type: this.state.themeType
+        primary: this.state.themeType === "light" ? {500:"#26a69a"} : {"500":"#82e9de"},
+        secondary: this.state.themeType === "light" ? {"A400":"#8eacbb"} : {"A400" :"#90a4ae"},
+        type: this.state.themeType
       }
     })
 
@@ -92,11 +93,11 @@ class App extends React.Component {
       <div>
         <ThemeProvider theme={theme}>
           <CssBaseline/>
-          <Grid container >
+          <Grid container>
             <Grid item xs={0} sm={0} md={2} lg={2} xl={2}>
             </Grid>
             <Grid item justify xs={12} sm={12} md={8} lg={8} xl={8} >
-              <Grid style={{padding:40}}>
+              <Grid style={{paddingLeft:40,paddingRight:40,paddingTop:25,paddingBottom:15}}>
               
                 <Grid container spacing={1}  justify="space-between" alignItems="center" style={{borderBottom: "0.3px solid",paddingBottom:"10px"}}>
                   <Grid item>
@@ -128,7 +129,7 @@ class App extends React.Component {
 
                 <MainResumePage language={this.state.language === 'es' ? spanishBundle : englishBundle}/>
 
-                <Grid item><Typography style={{borderTop: "0.3px solid",paddingTop:"10px",fontSize:10}} gutterBottom>Author: Andres Saldaña Aguilar 2020  -- Source: https://github.com/andresSaldanaAguilar/my-react-resume</Typography></Grid>
+                <Grid item><Typography style={{borderTop: "0.3px solid",paddingTop:"10px",fontSize:10}} >Author: Andres Saldaña Aguilar 2020  -- <Link href="https://github.com/andresSaldanaAguilar/my-react-resume">Source: https://github.com/andresSaldanaAguilar/my-react-resume</Link></Typography></Grid>
 
               </Grid>
             </Grid>
