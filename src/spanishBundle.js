@@ -26,17 +26,17 @@ const spanishBundle = {
         {
             header: 'Rysh electronica S.A de C.V (Freelance) - Desarrollador Full-Stack y Analista', date: 'Nov 2017 - Jul 2018',
             description: 'Análisis, diseño e implementación de una plataforma web para la empresa Rysh Electrónica SA de CV. Acortando los tiempos de reporte y reducción de paros en la operación de los trenes. Trabajamos bajo la metodología ágil SCRUM para su desarrollo.',
-            clients: 'Ferromex'
+            clients: 'Clientes: Ferromex'
         },
         {
             header: 'E-Global - Becario Desarrollador Backend ', date: 'Ago 2019 - Nov 2019',
             description: 'Desarrollo de servicios web REST para la autorización, almacenamiento y autenticación de transacciones bancarias para Bancomer con el uso de Spring Boot, migración de servicios de Java Enterprise Edition  a Spring Boot, E-Global es una cámara de compensación.',
-            clients: 'BBVA Bancomer, BanCoppel'
+            clients: 'Clientes: BBVA Bancomer, BanCoppel'
         },
         {
             header: 'ThinkSkink - Ingeniero de Software Jr', date: 'Dic 2019 - Presente',
-            description: 'Desarrollo de nuevas funcionalidades backend y frontend para el orquestamiento de flujos de negocio.',
-            clients: 'Telcel, Wom Chile, Nextel y Claro Perú'
+            description: 'Diseño y desarrollo de nuevas funcionalidades backend y frontend para el orquestamiento de flujos de negocio.',
+            clients: 'Clientes: Telcel, Wom Chile, Nextel y Claro Perú'
         },
     ]},
 
@@ -44,40 +44,40 @@ const spanishBundle = {
         {
             label: "Languages",
             rows: [
-                { key: 'Java', value: '4 years' },
-                { key: 'Python', value: '2 years' },
-                { key: 'Android', value: '2 years' },
-                { key: 'JavaScript', value: '3 years' }
+                { key: 'Java', value: '4 años' },
+                { key: 'Python', value: '2 años' },
+                { key: 'Android', value: '2 años' },
+                { key: 'JavaScript', value: '3 años' }
             ]
         }
         ,
         {
             label: "Databases",
             rows: [
-                { key: 'MySQL', value: '4 years' },
-                { key: 'OracleDB', value: '1 year' },
-                { key: 'Postgres', value: '1 year' },
-                { key: 'MongoDB', value: '< 1 year' }
+                { key: 'MySQL', value: '4 años' },
+                { key: 'OracleDB', value: '1 año' },
+                { key: 'Postgres', value: '1 año' },
+                { key: 'MongoDB', value: '< 1 año' }
             ]
         }
         ,
         {
             label: "Test Frameworks",
             rows: [
-                { key: 'JUnit', value: '< 1 year' },
-                { key: 'Selenium', value: '< 1 year' }
+                { key: 'JUnit', value: '< 1 año' },
+                { key: 'Selenium', value: '< 1 año' }
             ]
         }
         ,
         {
             label: "Technologies",
             rows: [
-                { key: 'Spring Boot', value: '1 year' },
-                { key: 'Spring MVC', value: '< 1 year' },
-                { key: 'React', value: '< 1 year' },
-                { key: 'JQuery', value: '2 years' },
-                { key: 'Maven', value: '1 year' },
-                { key: 'Git', value: '3 years' }
+                { key: 'Spring Boot', value: '1 año' },
+                { key: 'Spring MVC', value: '< 1 año' },
+                { key: 'React', value: '< 1 año' },
+                { key: 'JQuery', value: '2 años' },
+                { key: 'Maven', value: '1 año' },
+                { key: 'Git', value: '3 años' }
             ]
         }
     ]},

@@ -25,18 +25,18 @@ const englishBundle = {
     experience : { header:"Experience", content :[
         {
             header: '‍Rysh electronica S.A de C.V (Freelance) - Full-Stack developer and analyst', date: 'Nov 2017 - Jul 2018',
-            description: 'Analysis, design and developing of web platform for train stoplights issues reporting, shorting report time and attendance all over the country.This platform was developed with Laravel framework and deployed on a linux cloud sever.',
-            clients: 'Ferromex'
+            description: 'Analysis, design and developing of web platform for train stoplights issues reporting, shorting report time and attendance all over the country.This platform was developed with Laravel framework and deployed on a Linux cloud sever.',
+            clients: 'Clients: Ferromex'
         },
         {
             header: 'E-Global Software Developer Intern', date: 'Aug 2019 - Nov 2019',
-            description: 'Developing of web services for client transaction authentication, storage and authorization with the use of Spring Boot framework. Service Migration from Java EE to Spring Boot.',
-            clients: 'BBVA Bancomer, BanCoppel'
+            description: 'Developing of QR code payments, web services for client transaction authentication, storage and authorization with the use of Spring Boot framework. Service Migration from Java EE to Spring Boot.',
+            clients: 'Clients: BBVA Bancomer, BanCoppel'
         },
         {
             header: 'ThinkSkink - Software Engineer Jr', date: 'Dec 2019 - Present',
-            description: 'Developing of new backend, frontend, testing and deploying functionalities for business process automatization tool.',
-            clients: 'Telcel, Wom Chile, Nextel y Claro Perú'
+            description: 'Design and developing of new backend, frontend, testing and deploying functionalities for business process automatization tool.',
+            clients: 'Clients: Telcel, Wom Chile, Nextel y Claro Perú'
         },
     ]},
 

@@ -21,6 +21,7 @@ import englishBundle from './englishBundle';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import InvertColorsIcon from '@material-ui/icons/InvertColors';
+import TranslateIcon from '@material-ui/icons/Translate';
 import Link from '@material-ui/core/Link';
 
 /*imported from material UI webpage*/
@@ -102,27 +103,30 @@ class App extends React.Component {
                 <Grid container spacing={1}  justify="space-between" alignItems="center" style={{borderBottom: "0.3px solid",paddingBottom:"10px"}}>
                   <Grid item>
                     <Grid  container justify="space-between" alignItems="center">
-                      <InvertColorsIcon fontSize="large"/>
+                      <InvertColorsIcon fontSize="large" style={{marginRight:10}}/>
                       <AntSwitch onClick={this.toggleTheme} />
                     </Grid>
                   </Grid>
                   <Grid item>
-                    <FormControl variant="outlined">
-                      <InputLabel htmlFor="outlined-age-native-simple">Language</InputLabel>
-                      <Select
-                        native
-                        value={this.state.language}
-                        onChange={this.toggleLanguage}
-                        label="Language"
-                        inputProps={{
-                          name: 'age',
-                          id: 'outlined-age-native-simple',
-                        }}
-                      >
-                        <option value={"en"}>English</option>
-                        <option value={"es"}>Spanish</option>
-                      </Select>
-                    </FormControl>
+                    <Grid  container justify="space-between" alignItems="center">
+                      <TranslateIcon fontSize="large" style={{marginRight:15}}/>
+                      <FormControl variant="outlined">
+                        <InputLabel htmlFor="outlined-age-native-simple">Language</InputLabel>
+                        <Select
+                          native
+                          value={this.state.language}
+                          onChange={this.toggleLanguage}
+                          label="Language"
+                          inputProps={{
+                            name: 'age',
+                            id: 'outlined-age-native-simple',
+                          }}
+                        >
+                          <option value={"en"}>English</option>
+                          <option value={"es"}>Spanish</option>
+                        </Select>
+                      </FormControl>
+                    </Grid>
                   </Grid>
                 </Grid>
                 <p></p>

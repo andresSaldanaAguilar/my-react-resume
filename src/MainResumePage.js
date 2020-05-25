@@ -12,13 +12,27 @@ import TableRow from '@material-ui/core/TableRow';
 import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/Inbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import LabelImportantIcon from '@material-ui/icons/LabelImportant';
+import StarIcon from '@material-ui/icons/Star';
+
 
 const useStyles = theme => ({
   root: {
     justifyContent: 'center',
-    backgroundColor: blue
+    backgroundColor: "#26a69a"
   },
 });
+
+function ListItemLink(props) {
+  return <ListItem button component="a" {...props} />;
+}
 
 class MainResumePage extends React.Component {
   
@@ -68,7 +82,7 @@ class MainResumePage extends React.Component {
             <div>
               <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip style={{color:"#fff",fontWeight:400}} color="secondary" label={item.date}/></Typography>
               <Typography component="p" gutterBottom>{item.description}</Typography>
-              <Typography component="p" gutterBottom>Clients: {item.clients}</Typography>
+              <Typography component="p" gutterBottom>{item.clients}</Typography>
             </div>
           );
         })}
@@ -79,30 +93,26 @@ class MainResumePage extends React.Component {
         
         {this.props.language.skills.content.map((category) => {
           return(
-            <TableContainer >
-              <Table stickyHeader aria-label="sticky table">
-                <TableHead >
-                  <TableRow >
-                      <TableCell className={classes.root} >{category.label}</TableCell>
-                      <TableCell className={classes.root} ></TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {category.rows.map((row) => {
-                    return (
-                      <TableRow hover role="checkbox" tabIndex={-1} >                 
-                            <TableCell >{row.key}</TableCell>
-                            <TableCell >{row.value}</TableCell>   
-                      </TableRow>
-                    );
-                  })}
-                </TableBody>
-              </Table>
-            </TableContainer>
+              <List component="nav">
+              <ListItem className={classes.root} >
+                <ListItemIcon>
+                  <StarIcon />
+                </ListItemIcon>
+                <ListItemText primary={category.label} />
+              </ListItem>
+              {category.rows.map((row) => {
+                return (
+                    <ListItem button>
+                    <ListItemIcon >
+                      <LabelImportantIcon color="primary" />
+                    </ListItemIcon >
+                    <ListItemText primary={row.key+": "+row.value} />
+                    </ListItem>
+                 );
+              })}
+              </List>
           );
         })}
-        
-    
 
         <p></p>
 
