@@ -2,23 +2,14 @@ import React from 'react';
 import './MainResumePage.css';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Table from '@material-ui/core/Table';
 import Link from '@material-ui/core/Link';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
 import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import StarIcon from '@material-ui/icons/Star';
 
@@ -91,29 +82,34 @@ class MainResumePage extends React.Component {
 
         <Typography variant="h4" gutterBottom>{this.props.language.skills.header}</Typography>
         
-        {this.props.language.skills.content.map((category) => {
-          return(
-              <List component="nav">
-              <ListItem className={classes.root} >
-                <ListItemIcon>
-                  <StarIcon />
-                </ListItemIcon>
-                <ListItemText primary={category.label} />
-              </ListItem>
-              {category.rows.map((row) => {
-                return (
-                    <ListItem button>
-                    <ListItemIcon >
-                      <LabelImportantIcon color="primary" />
-                    </ListItemIcon >
-                    <ListItemText primary={row.key+": "+row.value} />
-                    </ListItem>
-                 );
-              })}
-              </List>
-          );
-        })}
-
+        <List component="nav">
+          {this.props.language.skills.content.map((category) => {
+            return(
+              <div>
+                <ListItem className={classes.root} >
+                  <ListItemIcon>
+                    <StarIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={category.label} />
+                </ListItem>
+                {category.rows.map((row) => {
+                  return (
+                    <div>
+                      <ListItem button>
+                      <ListItemIcon >
+                        <LabelImportantIcon color="primary" />
+                      </ListItemIcon >
+                      <ListItemText primary={row.key+": "+row.value} />
+                      </ListItem>
+                      <Divider ></Divider>
+                    </div>
+                  );
+                })}
+              </div>
+              );
+          })}
+        </List>
+            
         <p></p>
 
         <Typography variant="h4" gutterBottom>{this.props.language.certifications.header}</Typography>
