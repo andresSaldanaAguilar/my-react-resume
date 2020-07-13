@@ -74,6 +74,7 @@ const spanishBundle = {
             rows: [
                 { key: 'Spring Boot', value: '1 año' },
                 { key: 'Spring MVC', value: '< 1 año' },
+                { key: 'AngularJS', value: '< 1 año' },
                 { key: 'React', value: '< 1 año' },
                 { key: 'JQuery', value: '2 años' },
                 { key: 'Maven', value: '1 año' },

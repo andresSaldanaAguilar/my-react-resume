@@ -77,6 +77,7 @@ const englishBundle = {
                 { key: 'React', value: '< 1 year' },
                 { key: 'JQuery', value: '2 years' },
                 { key: 'Maven', value: '1 year' },
+                { key: 'AngularJS', value: '< 1 year' },
                 { key: 'Git', value: '3 years' }
             ]
         }
