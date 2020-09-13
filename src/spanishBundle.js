@@ -12,7 +12,7 @@ const spanishBundle = {
         { link: 'https://linkedin.com/in/andressaldanaaguilar', description: 'andressaldanaaguilar', icon: <LinkedInIcon ></LinkedInIcon> },
         { link: 'https://github.com/andresSaldanaAguilar', description: 'andresSaldanaAguilar', icon: <GitHubIcon ></GitHubIcon> },
         { link: 'mailto:andres.saldana.aguilar@gmail.com', description: 'andres.saldana.aguilar@gmail.com', icon: <MailIcon ></MailIcon> },
-        { link: '#', description: '5543890085', icon: <PhoneIcon ></PhoneIcon> }
+        { link: '#', description: '(+52)5543890085', icon: <PhoneIcon ></PhoneIcon> }
     ]},
 
     about : { header:"Acerca de mi", content :[

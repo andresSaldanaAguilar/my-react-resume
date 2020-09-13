@@ -3,16 +3,18 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
+import CodeIcon from '@material-ui/icons/Code';
 
 const englishBundle = {
 
-    degree: 'Computer Systems Engineer',
+    degree: 'Software Engineer',
 
     contact : { header:"Contact", content :[
-        { link: 'https://linkedin.com/in/andressaldanaaguilar', description: 'andressaldanaaguilar', icon: <LinkedInIcon ></LinkedInIcon> },
-        { link: 'https://github.com/andresSaldanaAguilar', description: 'andresSaldanaAguilar', icon: <GitHubIcon ></GitHubIcon> },
+        { link: 'https://linkedin.com/in/andressaldanaaguilar', description: 'LinkedIn', icon: <LinkedInIcon ></LinkedInIcon> },
+        { link: 'https://app.codesignal.com/profile/andressaldan', description: 'Code Signal', icon: <CodeIcon ></CodeIcon> },
+        { link: 'https://github.com/andresSaldanaAguilar', description: 'GitHub', icon: <GitHubIcon ></GitHubIcon> },
         { link: 'mailto:andres.saldana.aguilar@gmail.com', description: 'andres.saldana.aguilar@gmail.com', icon: <MailIcon ></MailIcon> },
-        { link: '#', description: '5543890085', icon: <PhoneIcon ></PhoneIcon> }
+        { link: '#', description: '(+52)5543890085', icon: <PhoneIcon ></PhoneIcon> }
     ]},
 
     about : { header:"About", content :[
@@ -25,18 +27,33 @@ const englishBundle = {
     experience : { header:"Experience", content :[
         {
             header: '‍Rysh electronica S.A de C.V (Freelance) - Full-Stack developer and analyst', date: 'Nov 2017 - Jul 2018',
-            description: 'Analysis, design and developing of web platform for train stoplights issues reporting, shorting report time and attendance all over the country.This platform was developed with Laravel framework and deployed on a Linux cloud sever.',
-            clients: 'Clients: Ferromex'
+            tasks: [
+                'This small project was all made by my sister and I, for train stoplights problem report.',
+                'Requirement and use case analysis and design.','Developing of REST controllers, views and models.',
+                'Backend and frontend were developed with Laravel framework, MariaDB storage and deployed on a Google Cloud CentOS server.'
+            ],
+            clients: 'Ferromex'
         },
         {
             header: 'E-Global Software Developer Intern', date: 'Aug 2019 - Nov 2019',
-            description: 'Developing of QR code payments, web services for client transaction authentication, storage and authorization with the use of Spring Boot framework. Service Migration from Java EE to Spring Boot.',
-            clients: 'Clients: BBVA Bancomer, BanCoppel'
+            tasks: [
+                'Service Migration from Java EE to Spring Boot for banking transaction, authentication, storage and authorization.',
+                'PostgresDB usage.',
+            ],
+            clients: 'BBVA Bancomer, BanCoppel.'
         },
         {
             header: 'ThinkSkink - Software Engineer Jr', date: 'Dec 2019 - Present',
-            description: 'Design and developing of new backend, frontend, testing and deploying functionalities for business process automatization tool.',
-            clients: 'Clients: Telcel, Wom Chile, Nextel y Claro Perú'
+            tasks: [
+                'Developing features with Spring Framework and Java 8.',
+                'Developing of user interfaces with AngularJS and React components.',
+                'Testing with Selenium and Junit.',
+                'SOAP and REST services definition and creation.',
+                'Code Refactoring and Clean Coding.',
+                'Customizing our product for clients.',
+                'OracleDB and PostgresDB usage.',
+            ],
+            clients: 'Telcel México, WOM Chile and Claro Perú'
         },
     ]},
 
@@ -86,7 +103,7 @@ const englishBundle = {
     
     thesis :  { header:"Thesis", content : {
         title: 'Real time energy production monitoring',
-        description: 'My thesis partners and I investigated and developed a system capable of real time energy production monitoring from distinct sources, alerting related problems on an android application. Logic was contained by an embedded server, processing and signal treatment was handled by a microcontroller.'
+        description: 'Capable of energy production monitoring on real time from various sources (nodes), notifying production problems and displaying data on a mobile application. Logic was contained on a raspberry pi 3 Linux server, data was stored in a document-oriented database, processing and signal treatment was handled by a microcontroller.'
     }},
 
     hobbies : { header:"Likes", content :[

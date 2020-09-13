@@ -32,7 +32,7 @@ class MainResumePage extends React.Component {
     return (
       <div>
         <Typography color="dark" variant="h2">Andrés Arnulfo Saldaña Aguilar</Typography>
-        <Typography style={{fontStyle: 'italic'}} color="primary" variant="small"gutterBottom>{this.props.language.degree}</Typography>
+        <Typography variant="h5" color="primary" gutterBottom>{this.props.language.degree}</Typography>
         <p></p>
         <Typography variant="h4" gutterBottom>{this.props.language.contact.header}</Typography>
         {this.props.language.contact.content.map((link) => {
@@ -72,8 +72,10 @@ class MainResumePage extends React.Component {
           return(
             <div>
               <Typography variant="h5" component="h4" gutterBottom color="primary">{item.header} <Chip style={{color:"#fff",fontWeight:400}} color="secondary" label={item.date}/></Typography>
-              <Typography component="p" gutterBottom>{item.description}</Typography>
-              <Typography component="p" gutterBottom>{item.clients}</Typography>
+              <ul>
+                {item.tasks.map((task) => {return(<li>{task}</li>);})}
+                <li>Clients : {item.clients}</li>
+              </ul>
             </div>
           );
         })}
