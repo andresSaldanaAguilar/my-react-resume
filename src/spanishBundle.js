@@ -25,17 +25,17 @@ const spanishBundle = {
     experience : { header:"Experiencia", content :[
         {
             header: 'Rysh electronica S.A de C.V (Freelance) - Desarrollador Full-Stack y Analista', date: 'Nov 2017 - Jul 2018',
-            description: 'Análisis, diseño e implementación de una plataforma web para la empresa Rysh Electrónica SA de CV. Acortando los tiempos de reporte y reducción de paros en la operación de los trenes. Trabajamos bajo la metodología ágil SCRUM para su desarrollo.',
+            tasks: ['Análisis, diseño e implementación de una plataforma web para la empresa Rysh Electrónica SA de CV. Acortando los tiempos de reporte y reducción de paros en la operación de los trenes. Trabajamos bajo la metodología ágil SCRUM para su desarrollo.'],
             clients: 'Clientes: Ferromex'
         },
         {
             header: 'E-Global - Becario Desarrollador Backend ', date: 'Ago 2019 - Nov 2019',
-            description: 'Desarrollo de servicios web REST para la autorización, almacenamiento y autenticación de transacciones bancarias para Bancomer con el uso de Spring Boot, migración de servicios de Java Enterprise Edition  a Spring Boot, E-Global es una cámara de compensación.',
+            tasks: ['Desarrollo de servicios web REST para la autorización, almacenamiento y autenticación de transacciones bancarias para Bancomer con el uso de Spring Boot, migración de servicios de Java Enterprise Edition  a Spring Boot, E-Global es una cámara de compensación.'],
             clients: 'Clientes: BBVA Bancomer, BanCoppel'
         },
         {
             header: 'ThinkSkink - Ingeniero de Software Jr', date: 'Dic 2019 - Presente',
-            description: 'Diseño y desarrollo de nuevas funcionalidades backend y frontend para el orquestamiento de flujos de negocio.',
+            tasks: ['Diseño y desarrollo de nuevas funcionalidades backend y frontend para el orquestamiento de flujos de negocio.'],
             clients: 'Clientes: Telcel, Wom Chile, Nextel y Claro Perú'
         },
     ]},
