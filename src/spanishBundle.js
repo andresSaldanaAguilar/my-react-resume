@@ -3,6 +3,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import MailIcon from '@material-ui/icons/Mail';
 import PhoneIcon from '@material-ui/icons/Phone';
+import CodeIcon from '@material-ui/icons/Code';
 
 const spanishBundle = {
 
@@ -10,6 +11,7 @@ const spanishBundle = {
 
     contact : { header:"Contacto", content :[
         { link: 'https://linkedin.com/in/andressaldanaaguilar', description: 'andressaldanaaguilar', icon: <LinkedInIcon ></LinkedInIcon> },
+        { link: 'https://app.codesignal.com/profile/andressaldan', description: 'Code Signal', icon: <CodeIcon ></CodeIcon> },
         { link: 'https://github.com/andresSaldanaAguilar', description: 'andresSaldanaAguilar', icon: <GitHubIcon ></GitHubIcon> },
         { link: 'mailto:andres.saldana.aguilar@gmail.com', description: 'andres.saldana.aguilar@gmail.com', icon: <MailIcon ></MailIcon> },
         { link: '#', description: '(+52)5543890085', icon: <PhoneIcon ></PhoneIcon> }
@@ -24,20 +26,36 @@ const spanishBundle = {
 
     experience : { header:"Experiencia", content :[
         {
-            header: 'Rysh electronica S.A de C.V (Freelance) - Desarrollador Full-Stack y Analista', date: 'Nov 2017 - Jul 2018',
-            tasks: ['Análisis, diseño e implementación de una plataforma web para la empresa Rysh Electrónica SA de CV. Acortando los tiempos de reporte y reducción de paros en la operación de los trenes. Trabajamos bajo la metodología ágil SCRUM para su desarrollo.'],
-            clients: 'Clientes: Ferromex'
+            header: 'ThinkSkink - Ingeniero de Software Jr', date: 'Dic 2019 - Presente',
+            tasks: [
+                'Desarrollo de nuevas funcionalidades con Spring Framework y Java 8.',
+                'Desarrollo de vistas con AngularJS y componentes con ReactJS.',
+                'Pruebas unitarias con Junit y de integración con Selenium.',
+                'Definición y creación de servicios SOAP and REST.',
+                'Code Refactoring y Clean Coding.',
+                'Personalización de nuestro producto para nuestros clientes.',
+                'Uso de OracleDB y PostgresDB.',
+            ], 
+            clients: 'Clientes: Telcel México, WOM Chile and Claro Perú'
+
         },
         {
             header: 'E-Global - Becario Desarrollador Backend ', date: 'Ago 2019 - Nov 2019',
-            tasks: ['Desarrollo de servicios web REST para la autorización, almacenamiento y autenticación de transacciones bancarias para Bancomer con el uso de Spring Boot, migración de servicios de Java Enterprise Edition  a Spring Boot, E-Global es una cámara de compensación.'],
+            tasks: [
+                'Migración de servicios web Java EE a Spring Boot para autorización, almacenamiento y autenticación de transacciones bancarias.',
+                'Uso de PostgresDB.',
+            ], 
             clients: 'Clientes: BBVA Bancomer, BanCoppel'
         },
         {
-            header: 'ThinkSkink - Ingeniero de Software Jr', date: 'Dic 2019 - Presente',
-            tasks: ['Diseño y desarrollo de nuevas funcionalidades backend y frontend para el orquestamiento de flujos de negocio.'],
-            clients: 'Clientes: Telcel, Wom Chile, Nextel y Claro Perú'
-        },
+            header: 'Rysh electronica S.A de C.V (Freelance) - Desarrollador Full-Stack y Analista', date: 'Nov 2017 - Jul 2018',
+            tasks: [
+                'Diseño y análisis de requerimientos y casos de uso. Todo el proyecto fue hecho por mi hermana y yo para el reporte de problemas en semáforos de vías del tren.',
+                'Desarrollo de controladores REST, vistas y modelos de datos.',
+                'El Backend y Frontend fueron desarrollados en Laravel framework, usamos MariaDB como base de datos y la aplicación fue desplegada en un servidor CentOS en Google Cloud.'
+            ], 
+            clients: 'Clientes: Ferromex'
+        }
     ]},
 
     skills : { header:"Habilidaddes Técnicas", content :[

@@ -26,23 +26,6 @@ const englishBundle = {
 
     experience : { header:"Experience", content :[
         {
-            header: '‍Rysh electronica S.A de C.V (Freelance) - Full-Stack developer and analyst', date: 'Nov 2017 - Jul 2018',
-            tasks: [
-                'This small project was all made by my sister and I, for train stoplights problem report.',
-                'Requirement and use case analysis and design.','Developing of REST controllers, views and models.',
-                'Backend and frontend were developed with Laravel framework, MariaDB storage and deployed on a Google Cloud CentOS server.'
-            ],
-            clients: 'Ferromex'
-        },
-        {
-            header: 'E-Global Software Developer Intern', date: 'Aug 2019 - Nov 2019',
-            tasks: [
-                'Service Migration from Java EE to Spring Boot for banking transaction, authentication, storage and authorization.',
-                'PostgresDB usage.',
-            ],
-            clients: 'BBVA Bancomer, BanCoppel.'
-        },
-        {
             header: 'ThinkSkink - Software Engineer Jr', date: 'Dec 2019 - Present',
             tasks: [
                 'Developing features with Spring Framework and Java 8.',
@@ -55,6 +38,23 @@ const englishBundle = {
             ],
             clients: 'Telcel México, WOM Chile and Claro Perú'
         },
+        {
+            header: 'E-Global Software Developer Intern', date: 'Aug 2019 - Nov 2019',
+            tasks: [
+                'Service Migration from Java EE to Spring Boot for banking transaction, authentication, storage and authorization.',
+                'PostgresDB usage.',
+            ],
+            clients: 'BBVA Bancomer, BanCoppel.'
+        },
+        {
+            header: '‍Rysh electronica S.A de C.V (Freelance) - Full-Stack developer and analyst', date: 'Nov 2017 - Jul 2018',
+            tasks: [
+                'This small project was all made by my sister and I, for train stoplights problem report.',
+                'Requirement and use case analysis and design.','Developing of REST controllers, views and models.',
+                'Backend and frontend were developed with Laravel framework, MariaDB storage and deployed on a Google Cloud CentOS server.'
+            ],
+            clients: 'Ferromex'
+        }
     ]},
 
     skills : { header:"Technical Skills", content :[

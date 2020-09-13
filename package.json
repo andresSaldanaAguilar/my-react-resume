@@ -1,6 +1,6 @@
 {
-  "homepage": "https://andressaldanaaguilar.github.io/my-react-resume",
-  "name": "my-resume",
+  "homepage": "https://andressaldanaaguilar.github.io/resume",
+  "name": "resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
